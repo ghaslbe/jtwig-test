@@ -6,7 +6,7 @@
 	<display-name>HttpServletRequest</display-name>
 	<servlet>
 		<servlet-name>myservlet</servlet-name>
-		<servlet-class>main.java.com.ovmedia.servlet.ServletRequestExample</servlet-class>
+		<servlet-class>main.java.com.ovmedia.servlet.StartController</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>myservlet</servlet-name>
