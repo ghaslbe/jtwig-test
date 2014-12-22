@@ -34,6 +34,7 @@ public class StartController extends Controller {
 			Map<String, Object> dbresult = dbc.doquery("SELECT username FROM user limit 0,10");
 			params.put("users", dbresult);
 			params.put("name", "guenther");
+			params.put("pagetitle", "Hallo Welt");
 
 			super.display("screen/html/template.twig", params);
 
