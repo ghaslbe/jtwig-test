@@ -1,4 +1,4 @@
-package main.com.ovmedia.servlet;
+package main.java.com.ovmedia.servlet;
 
 import java.io.IOException;
 
