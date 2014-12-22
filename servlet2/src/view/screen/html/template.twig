@@ -1,6 +1,12 @@
 
-Hi {{ name }}!
-Your id: {{ id }}
+ {% extends 'main.twig' %} 
+
+ {% block main_content %}
+ 
+<div>
+Hi {{ name }}!<br>
+Your id: {{ id }}<br>
+</div>
 
 <div>
 {% for user in users %}
@@ -13,3 +19,4 @@ Your id: {{ id }}
 </div>
 
 
+	{% endblock %}

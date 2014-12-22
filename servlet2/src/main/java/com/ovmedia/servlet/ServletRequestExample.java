@@ -60,7 +60,7 @@ public class ServletRequestExample extends HttpServlet {
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 			Renderable compiled = new JtwigTemplate(
 					new File(
-							"/var/lib/tomcat6/webapps/servletexample/WEB-INF/classes/template.twig"),
+							"/var/lib/tomcat6/webapps/servletexample/WEB-INF/classes/screen/html/template.twig"),
 					configuration).compile();
 			out.println("--DB-TEST--");
 
