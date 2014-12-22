@@ -9,7 +9,7 @@ public class Helper {
 
 	private  Logger _logger = Logger.getRootLogger();
 
-	public  void newLogger() {
+	public void newLogger() {
 		try {
 			PatternLayout layout = new PatternLayout("%d{ISO8601} %-5p [%t] %c: %m%n");
 			DailyRollingFileAppender fileAppender = new DailyRollingFileAppender(layout, "logs/MeineLogDatei.log", "'.'yyyy-MM-dd_HH-mm");

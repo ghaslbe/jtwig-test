@@ -28,53 +28,40 @@ public class Controller extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	private HttpServletResponse _response;
-	
-	
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
 
-		
-		doAll(request, response);
-	}
-
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		doAll(request, response);
 	}
 
-	
-	protected void display( String templatename,Map<String, Object> map2) {
-		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		doAll(request, response);
+	}
+
+	protected void display(String templatename, Map<String, Object> map2) {
+
 		try {
 			PrintWriter out = _response.getWriter();
 			_response.setContentType("text/html");
-			
+
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("_serverid", "1234");
-		
+
 			map.putAll(map2);
-			
+
 			JtwigConfiguration configuration = new JtwigConfiguration();
 
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 			String defaultpath = "/var/lib/tomcat6/webapps/servletexample/WEB-INF/classes/";
-			Renderable compiled = new JtwigTemplate(
-					new File(defaultpath+templatename),configuration).compile();
-		
+			Renderable compiled = new JtwigTemplate(new File(defaultpath + templatename), configuration).compile();
 
-			
-			
 			JtwigModelMap jtwigModelMap = new JtwigModelMap();
 			jtwigModelMap.add(map);
 
-			compiled.render(RenderContext.create(configuration.render(),jtwigModelMap, outputStream));
+			compiled.render(RenderContext.create(configuration.render(), jtwigModelMap, outputStream));
 			out.print(outputStream.toString());
-			
-			
-			
-			
-			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -88,41 +75,36 @@ public class Controller extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-	
-		
+
 	}
 
-	protected void doAll(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		this._response = response;
-/*
-		out.println("<br>getAuthType()- " + request.getAuthType());
-		out.println("<br>getDateHeader()- " + request.getDateHeader("temp"));
-		Enumeration<String> headers = request.getHeaderNames();
-		while (headers.hasMoreElements()) {
-			out.println("<br>" + headers.nextElement());
-		}
-		out.println("<br>getMethod()- " + request.getMethod());
-		out.println("<br>getPathInfo()- " + request.getPathInfo());
-		out.println("<br>getPathTranslated()- " + request.getPathTranslated());
-		out.println("<br>getQueryString()- " + request.getQueryString());
-		out.println("<br>getRemoteUser()- " + request.getRemoteUser());
-		out.println("<br>getRequestedSessionId()"
-				+ request.getRequestedSessionId());
-		out.println("<br>getRequestURI()- " + request.getRequestURI());
-		out.println("<br>getRequestURL()- " + request.getRequestURL());
-		out.println("<br>getServletPath()" + request.getServletPath());
-		out.println("<br>isRequestedSessionIdFromCookie()- "
-				+ request.isRequestedSessionIdFromCookie());
-		out.println("<br>isRequestedSessionIdFromUrl()- "
-				+ request.isRequestedSessionIdFromUrl());
-		out.println("<br>isRequestedSessionIdFromURL()- "
-				+ request.isRequestedSessionIdFromURL());
-		out.println("<br>isRequestedSessionIdValid()- "
-				+ request.isRequestedSessionIdValid());
-		*/
+		/*
+		 * out.println("<br>getAuthType()- " + request.getAuthType());
+		 * out.println("<br>getDateHeader()- " + request.getDateHeader("temp"));
+		 * Enumeration<String> headers = request.getHeaderNames(); while
+		 * (headers.hasMoreElements()) { out.println("<br>" +
+		 * headers.nextElement()); } out.println("<br>getMethod()- " +
+		 * request.getMethod()); out.println("<br>getPathInfo()- " +
+		 * request.getPathInfo()); out.println("<br>getPathTranslated()- " +
+		 * request.getPathTranslated()); out.println("<br>getQueryString()- " +
+		 * request.getQueryString()); out.println("<br>getRemoteUser()- " +
+		 * request.getRemoteUser()); out.println("<br>getRequestedSessionId()" +
+		 * request.getRequestedSessionId()); out.println("<br>getRequestURI()- "
+		 * + request.getRequestURI()); out.println("<br>getRequestURL()- " +
+		 * request.getRequestURL()); out.println("<br>getServletPath()" +
+		 * request.getServletPath());
+		 * out.println("<br>isRequestedSessionIdFromCookie()- " +
+		 * request.isRequestedSessionIdFromCookie());
+		 * out.println("<br>isRequestedSessionIdFromUrl()- " +
+		 * request.isRequestedSessionIdFromUrl());
+		 * out.println("<br>isRequestedSessionIdFromURL()- " +
+		 * request.isRequestedSessionIdFromURL());
+		 * out.println("<br>isRequestedSessionIdValid()- " +
+		 * request.isRequestedSessionIdValid());
+		 */
 
 	}
 
