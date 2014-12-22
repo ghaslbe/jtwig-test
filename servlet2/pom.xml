@@ -60,7 +60,7 @@
      </plugins>
 	  <resources>
      <resource>
-       <directory>src/resources/</directory>
+       <directory>src/view</directory>
      </resource>
    </resources>
 
