@@ -1,0 +1,15 @@
+
+Hi {{ name }}!
+Your id: {{ id }}
+
+<div>
+{% for user in users %}
+{% for key, value in user %}
+<b>{{ key }}</b>: <span>{{ value }}</span><br>
+{% endfor %}
+{% else %}
+<p>No values</p>
+{% endfor %}
+</div>
+
+
