@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -54,6 +55,10 @@ public class Controller extends HttpServlet {
 
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 			String defaultpath = "";
+			
+			ServletContext context = getServletContext();
+			String fullPath = context.getRealPath("");
+			System.out.println(fullPath);
 			
 			String[] array = new String[]{
 					"/var/lib/tomcat6/webapps/globalview/WEB-INF/classes/",
