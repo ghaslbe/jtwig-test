@@ -61,13 +61,14 @@ public class Controller extends HttpServlet {
 			System.out.println(fullPath);
 			
 			String[] array = new String[]{
-					"/var/lib/tomcat6/webapps/globalview/WEB-INF/classes/",
-					"/var/lib/tomcat6/webapps/servletexample/WEB-INF/classes/"
+					"/WEB-INF/xy/",
+					"/WEB-INF/classes/"
 					};
 			 
 			// ForEach 
 			for( String path: array )
 			{
+				path = fullPath+path;
 				System.out.println("check: "+path+ templatename);
 				
 				File file = new File(path + templatename);
