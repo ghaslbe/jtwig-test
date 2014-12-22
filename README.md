@@ -1,29 +1,12 @@
-# README #
+# jtwig-test #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is a simple test for jtwig
 
 ### What is this repository for? ###
 
 * Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
+### why jtwig ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* iam using twig for php and wanted to use it also in java programms
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
