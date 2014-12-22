@@ -47,15 +47,17 @@ public class Databaseconnector {
 			ResultSetMetaData md = rs.getMetaData();
 			int columns = md.getColumnCount();
 			int x = 1;
+			System.out.print(">");
 			while (rs.next()) {
 				x++;
 				HashMap row = new HashMap();
 				for (int i = 1; i <= columns; i++) {
 					row.put(md.getColumnName(i), rs.getObject(i));
+					System.out.print("o");
 				}
 				hm1.put("line" + x, row);
 			}
-
+			System.out.println("<");
 			// STEP 6: Clean-up environment
 			rs.close();
 			stmt.close();
