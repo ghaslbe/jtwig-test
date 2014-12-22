@@ -6,16 +6,16 @@
 	<display-name>HttpServletRequest</display-name>
 	<servlet>
 		<servlet-name>myservlet</servlet-name>
-		<servlet-class>devmanuals.servlet.ServletRequestExample</servlet-class>
+		<servlet-class>com.ovmedia.servlet.ServletRequestExample</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>myservlet</servlet-name>
-		<url-pattern>/run-servlet.html</url-pattern>
+		<url-pattern>/start</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>principalServlet</servlet-name>
-		<servlet-class>devmanuals.servlet.UserPrincipal</servlet-class>
+		<servlet-class>com.ovmedia.servlet.UserPrincipal</servlet-class>
 		<security-role-ref>
 	    <description>Principal Testing</description>
 		<role-name>Mgr</role-name>

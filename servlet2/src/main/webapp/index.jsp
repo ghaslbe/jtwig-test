@@ -1,3 +1,3 @@
 <%
-	response.sendRedirect("run-servlet.html");
+	response.sendRedirect("start");
 %>
