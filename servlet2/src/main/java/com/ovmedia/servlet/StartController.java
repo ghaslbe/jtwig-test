@@ -25,7 +25,7 @@ import com.lyncode.jtwig.configuration.JtwigConfiguration;
 import com.lyncode.jtwig.content.api.Renderable;
 import com.lyncode.jtwig.render.RenderContext;
 
-public class ServletRequestExample extends HttpServlet {
+public class StartController extends HttpServlet {
 
 	/**
 	 * 
@@ -142,9 +142,9 @@ public class ServletRequestExample extends HttpServlet {
 			JtwigModelMap jtwigModelMap = new JtwigModelMap();
 			jtwigModelMap.add(map);
 
-			compiled.render(RenderContext.create(configuration.render(),
-					jtwigModelMap, outputStream));
-			out.println("twig output:" + outputStream.toString() + "");
+			compiled.render(RenderContext.create(configuration.render(),jtwigModelMap, outputStream));
+			out.print(outputStream.toString());
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
