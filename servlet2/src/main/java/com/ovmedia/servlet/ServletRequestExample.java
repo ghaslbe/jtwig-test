@@ -39,17 +39,6 @@ public class ServletRequestExample extends HttpServlet {
 		doAll(request, response);
 	}
 
-	public HashMap resultSetToHashMap(ResultSet rs) throws SQLException {
-		ResultSetMetaData md = rs.getMetaData();
-		int columns = md.getColumnCount();
-		HashMap row = new HashMap();
-		while (rs.next()) {
-			for (int i = 1; i <= columns; i++) {
-				row.put(md.getColumnName(i), rs.getObject(i));
-			}
-		}
-		return row;
-	}
 
 	protected void doAll(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
