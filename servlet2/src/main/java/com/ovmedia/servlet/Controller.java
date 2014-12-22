@@ -61,8 +61,8 @@ public class Controller extends HttpServlet {
 			System.out.println(fullPath);
 			
 			String[] array = new String[]{
-					"/WEB-INF/xy/",
-					"/WEB-INF/classes/"
+					"/WEB-INF/templates/src/",
+					"/WEB-INF/templates/global/"
 					};
 			 
 			// ForEach 
