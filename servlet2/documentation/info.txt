@@ -5,7 +5,7 @@
   602  cp target/servletexample.war /var/lib/tomcat6/webapps/ 
   603  mvn clean
 cp resources/mysql-connector-java-5.1.34-bin.jar /usr/share/tomcat6/lib/
-http://stage.vondir.de:8080/servletexample/
+http://domain.de:8080/servletexample/
 mvn deploy;cp target/servletexample.war /var/lib/tomcat6/webapps/
-http://stage.vondir.de:8080/servletexample/?id=123
+http://domain.de:8080/servletexample/?id=123
 
