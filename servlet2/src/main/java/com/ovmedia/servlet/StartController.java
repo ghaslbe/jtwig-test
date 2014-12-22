@@ -27,15 +27,15 @@ public class StartController extends Controller {
 
 		try {
 
-			Map<String, Object> map = new HashMap<String, Object>();
-			map.put("id", id);
+			Map<String, Object> params = new HashMap<String, Object>();
+			params.put("id", id);
 
 			Databaseconnector dbc = new Databaseconnector();
 			Map<String, Object> dbresult = dbc.doquery("SELECT username FROM user limit 0,10");
-			map.put("users", dbresult);
-			map.put("name", "guenther");
+			params.put("users", dbresult);
+			params.put("name", "guenther");
 
-			super.display("screen/html/template.twig", map);
+			super.display("screen/html/template.twig", params);
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

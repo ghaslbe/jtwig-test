@@ -47,7 +47,7 @@ public class Databaseconnector {
 			ResultSetMetaData md = rs.getMetaData();
 			int columns = md.getColumnCount();
 			int x = 1;
-			System.out.print(">");
+			System.out.print("queryme >");
 			while (rs.next()) {
 				x++;
 				HashMap row = new HashMap();
