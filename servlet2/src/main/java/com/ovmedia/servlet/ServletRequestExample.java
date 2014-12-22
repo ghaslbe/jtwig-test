@@ -1,11 +1,18 @@
 package main.java.com.ovmedia.servlet;
 
-import java.io.IOException;
-import java.io.*;
-import java.util.*;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.sql.*;
-import java.util.List;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,12 +20,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.lyncode.jtwig.JtwigModelMap;
-import com.lyncode.jtwig.resource.FileJtwigResource;
 import com.lyncode.jtwig.JtwigTemplate;
 import com.lyncode.jtwig.configuration.JtwigConfiguration;
 import com.lyncode.jtwig.content.api.Renderable;
 import com.lyncode.jtwig.render.RenderContext;
-import com.lyncode.jtwig.resource.ClasspathJtwigResource;
 
 public class ServletRequestExample extends HttpServlet {
 
@@ -76,7 +81,7 @@ public class ServletRequestExample extends HttpServlet {
 			Statement stmt = null;
 			try {
 				// STEP 2: Register JDBC driver
-				Class.forName("com.mysql.jdbc.Driver");
+				Class.forName(JDBC_DRIVER);
 
 				// STEP 3: Open a connection
 				conn = DriverManager.getConnection(DB_URL, USER, PASS);
