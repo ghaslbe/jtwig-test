@@ -53,7 +53,24 @@ public class Controller extends HttpServlet {
 			JtwigConfiguration configuration = new JtwigConfiguration();
 
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-			String defaultpath = "/var/lib/tomcat6/webapps/servletexample/WEB-INF/classes/";
+			String defaultpath = "";
+			
+			String[] array = new String[]{
+					"/var/lib/tomcat6/webapps/globalview/WEB-INF/classes/",
+					"/var/lib/tomcat6/webapps/servletexample/WEB-INF/classes/"
+					};
+			 
+			// ForEach 
+			for( String path: array )
+			{
+				System.out.println("k = "+path);
+				
+				File file = new File(defaultpath + templatename);
+				if( file.exists() ){
+					defaultpath = path;	
+				}
+			}
+
 			Renderable compiled = new JtwigTemplate(new File(defaultpath + templatename), configuration).compile();
 
 			JtwigModelMap jtwigModelMap = new JtwigModelMap();
