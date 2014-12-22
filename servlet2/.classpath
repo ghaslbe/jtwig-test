@@ -2,14 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="/Users/guentherhaslbeck/Documents/workspace_servlet/servlet2/extjars/javax.servlet-5.1.12.jar"/>
-	<classpathentry kind="lib" path="/Users/guentherhaslbeck/Documents/workspace_servlet/servlet2/extjars/jtwig-types-3.0.0.jar"/>
-	<classpathentry kind="lib" path="/Users/guentherhaslbeck/Documents/workspace_servlet/servlet2/extjars/jtwig-functions-3.1.0.jar"/>
-	<classpathentry kind="lib" path="/Users/guentherhaslbeck/Documents/workspace_servlet/servlet2/extjars/jtwig-functions-3.0.0.jar"/>
-	<classpathentry kind="lib" path="/Users/guentherhaslbeck/Documents/workspace_servlet/servlet2/extjars/builder-commons-1.0.2.jar"/>
-	<classpathentry kind="lib" path="/Users/guentherhaslbeck/Documents/workspace_servlet/servlet2/extjars/jtwig-core-3.1.0.jar"/>
-	<classpathentry kind="lib" path="/Users/guentherhaslbeck/Documents/workspace_servlet/servlet2/extjars/jtwig-core-3.0.0.jar"/>
-	<classpathentry kind="lib" path="/Users/guentherhaslbeck/Documents/workspace_servlet/servlet2/extjars/jtwig-spring-3.0.0.jar"/>
 	<classpathentry kind="lib" path="/Users/guentherhaslbeck/javaprojectframework/servlet2/extjars/javax.servlet-5.1.12.jar"/>
 	<classpathentry kind="lib" path="/Users/guentherhaslbeck/javaprojectframework/servlet2/extjars/jtwig-types-3.0.0.jar"/>
 	<classpathentry kind="lib" path="/Users/guentherhaslbeck/javaprojectframework/servlet2/extjars/jtwig-functions-3.1.0.jar"/>
