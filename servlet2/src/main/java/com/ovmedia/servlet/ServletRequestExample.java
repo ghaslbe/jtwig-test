@@ -50,7 +50,7 @@ public class ServletRequestExample extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-		out.println("<br>getAuthType()- " + request.getAuthType());
+	
 
 		String id = request.getParameter("id");
 
@@ -62,7 +62,7 @@ public class ServletRequestExample extends HttpServlet {
 					new File(
 							"/var/lib/tomcat6/webapps/servletexample/WEB-INF/classes/screen/html/template.twig"),
 					configuration).compile();
-			out.println("--DB-TEST--");
+		
 
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("test", "test");
@@ -150,7 +150,7 @@ public class ServletRequestExample extends HttpServlet {
 			e.printStackTrace();
 			out.println("<br>exception: " + e.toString());
 		}
-
+/*
 		out.println("<br>getAuthType()- " + request.getAuthType());
 		out.println("<br>getDateHeader()- " + request.getDateHeader("temp"));
 		Enumeration<String> headers = request.getHeaderNames();
@@ -175,6 +175,7 @@ public class ServletRequestExample extends HttpServlet {
 				+ request.isRequestedSessionIdFromURL());
 		out.println("<br>isRequestedSessionIdValid()- "
 				+ request.isRequestedSessionIdValid());
+		*/
 
 	}
 
