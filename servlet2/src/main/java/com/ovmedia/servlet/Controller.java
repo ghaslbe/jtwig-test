@@ -63,12 +63,12 @@ public class Controller extends HttpServlet {
 			// ForEach 
 			for( String path: array )
 			{
-				System.out.println("check: "+path);
+				System.out.println("check: "+path+ templatename);
 				
 				File file = new File(path + templatename);
 				if( file.exists() ){
 					defaultpath = path;	
-					System.out.println("found in: "+path);
+					System.out.println("found in: "+path+ templatename);
 				}
 			}
 
