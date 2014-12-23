@@ -25,7 +25,7 @@
 			<artifactId>jtwig-core</artifactId>
 			<version>${jtwig.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -67,11 +67,14 @@
 			</plugin>
 		</plugins>
 		<resources>
-			
-        <resource>
-            <directory>src/view</directory>
-            <targetPath>${project.build.directory}/${project.build.finalName}/WEB-INF/templates/src/view</targetPath>
-        </resource>
+			<resource>
+				<directory>src/main/java/de/ovmedia/home/view</directory>
+				<targetPath>${project.build.directory}/${project.build.finalName}/WEB-INF/templates/de/ovmedia/home/view</targetPath>
+			</resource>
+			<resource>
+				<directory>src/main/java/de/ovmedia/globalview/view</directory>
+				<targetPath>${project.build.directory}/${project.build.finalName}/WEB-INF/templates/de/ovmedia/globalview/view</targetPath>
+			</resource>			
 		</resources>
 
 	</build>
