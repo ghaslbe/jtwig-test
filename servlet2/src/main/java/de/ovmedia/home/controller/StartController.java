@@ -1,4 +1,4 @@
-package main.de.ovmedia.home.controller;
+package main.java.de.ovmedia.home.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -8,9 +8,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import main.de.ovmedia.libs.Controller;
-import main.de.ovmedia.libs.Databaseconnector;
-import main.de.ovmedia.libs.Helper;
+import main.java.de.ovmedia.libs.Controller;
+import main.java.de.ovmedia.libs.Databaseconnector;
+import main.java.de.ovmedia.libs.Helper;
 
 @SuppressWarnings("serial")
 public class StartController extends Controller {

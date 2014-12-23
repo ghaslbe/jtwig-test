@@ -1,4 +1,4 @@
-package main.de.ovmedia.libs;
+package main.java.de.ovmedia.libs;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

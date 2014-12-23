@@ -1,4 +1,4 @@
-package main.de.ovmedia.libs;
+package main.java.de.ovmedia.libs;
 
 import org.apache.log4j.DailyRollingFileAppender;
 import org.apache.log4j.Level;
