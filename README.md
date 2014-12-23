@@ -10,6 +10,7 @@ This is a simple test for jtwig
 
 * iam using twig for php and wanted to use it also in java programms
 * more: http://jtwig.org/
+* git: https://github.com/jtwig
 
 I am not related to jtwig or the autors in any way...
 
