@@ -67,9 +67,7 @@
 			</plugin>
 		</plugins>
 		<resources>
-			<resource>
-				<directory>src/view</directory>
-			</resource>
+			
         <resource>
             <directory>src/view</directory>
             <targetPath>${project.build.directory}/${project.build.finalName}/WEB-INF/templates/src/view</targetPath>
