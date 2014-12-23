@@ -1,4 +1,4 @@
-package main.java.com.ovmedia.home.controller;
+package main.de.ovmedia.home.controller;
 
 import java.io.IOException;
 
