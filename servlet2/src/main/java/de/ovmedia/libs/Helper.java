@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 
 public class Helper {
-
+//
 	private  Logger _logger = Logger.getRootLogger();
 
 	public void newLogger() {
